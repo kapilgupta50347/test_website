@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  button {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+/* 🌞 Light Mode Colors (exact brand hex values) */
+:root {
+  --navy: #001F3F;     /* Deep navy blue */
+  --beige: #F5F5DC;    /* Light beige */
+  --cheese: #FFD23F;   /* Bright yellow */
+
+  --background: var(--beige);
+  --foreground: var(--navy);
+  --card: #ffffff;
+  --card-foreground: var(--navy);
+  --popover: #ffffff;
+  --popover-foreground: var(--navy);
+  --primary: var(--navy);
+  --primary-foreground: var(--beige);
+  --secondary: var(--cheese);
+  --secondary-foreground: var(--navy);
+  --muted: #f0f0e6;
+  --muted-foreground: #333333;
+  --accent: var(--cheese);
+  --accent-foreground: var(--navy);
+  --border: #d9d9d9;
+  --input: #d9d9d9;
+  --ring: var(--navy);
+  --radius: 0.75rem;
+}
+
+/* 🌙 Dark Mode Colors */
+.dark {
+  --navy: #001F3F;
+  --beige: #F5F5DC;
+  --cheese: #FFD23F;
+
+  --background: #0b1623;           /* deeper navy tone */
+  --foreground: var(--beige);
+  --card: #102030;
+  --card-foreground: var(--beige);
+  --popover: #102030;
+  --popover-foreground: var(--beige);
+  --primary: var(--cheese);
+  --primary-foreground: var(--navy);
+  --secondary: #19304d;
+  --secondary-foreground: var(--beige);
+  --muted: #1b2b40;
+  --muted-foreground: #cccccc;
+  --accent: var(--cheese);
+  --accent-foreground: var(--navy);
+  --border: #2a3d5a;
+  --input: #2a3d5a;
+  --ring: var(--cheese);
+  --radius: 0.75rem;
+}
+
+/* ✅ General Styles */
+* {
+  border-color: var(--border);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* 🌫️ Glass Effect Cards */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.dark .glass-effect {
+  background: rgba(0, 31, 63, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* ✨ Gradient Text (cheese → beige → navy) */
+.gradient-text {
+  background: linear-gradient(to right, #001F3F, #FFD23F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🫧 Floating Animation */
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* 💫 Glow Effect */
+.glow-effect {
+  box-shadow: 0 0 20px rgba(255, 210, 63, 0.4); /* soft cheese glow */
+}
+
+/* 🎴 Card Hover Effect */
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* 🌟 Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.btn-primary:hover {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+::selection {
+  background: var(--cheese);
+  color: var(--navy);
+}
