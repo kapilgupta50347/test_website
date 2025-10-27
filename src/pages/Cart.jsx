@@ -1,9 +1,9 @@
 import React from "react";
 import { Trash2, Plus, Minus, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+// import { Card, CardContent } from "@/components/ui/card";
 import { useCart } from "@/hooks/useCart";
-import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function Cart() {
   const {
