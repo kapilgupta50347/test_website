@@ -23,9 +23,8 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", path: "/", icon: Printer },
     { name: "Products", path: "/products", icon: Package },
-    { name: "Custom Design", path: "/custom-design", icon: Upload },
-    { name: "Designers", path: "/designers", icon: Users },
-    { name: "My Account", path: "/my-account", icon: User },
+    { name: "Custom Design", path: "/CustomDesign", icon: Upload },
+    { name: "My Account", path: "/MyAccount", icon: User },
   ];
 
   const cartItemCount = cartItems.reduce(

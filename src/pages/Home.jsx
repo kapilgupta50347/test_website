@@ -221,15 +221,6 @@ const Home = () => {
                 Start Shopping
               </Button>
             </Link>
-            <Link to="/designers">
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-[#FFD23F]/50 text-[#FFD23F] hover:bg-[#FFD23F]/10 px-8 py-4"
-              >
-                Find a Designer
-              </Button>
-            </Link>
           </div>
         </motion.div>
       </section>
