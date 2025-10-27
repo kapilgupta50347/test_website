@@ -9,9 +9,9 @@ import CustomDesign from "@/pages/CustomDesign";
 import Cart from "@/pages/Cart";
 
 // My Account Pages
-import MyAccount from "@pages/MyAccount/MyAccount";
-import AccountOrders from "@pages/MyAccount/Orders";
-import AccountDetails from "@pages/MyAccount/AccountDetails";
+import MyAccount from "@/pages/MyAccount/MyAccount";
+import AccountOrders from "@/pages/MyAccount/Orders";
+import AccountDetails from "@/pages/MyAccount/AccountDetails";
 
 function App() {
   return (
